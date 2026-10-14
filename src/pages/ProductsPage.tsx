@@ -25,7 +25,7 @@ export const ProductsPage: React.FC = () => {
       <SEO
         title={pageTitle}
         description={pageDescription}
-        canonical={`https://tanviimpex.com/products${categoryParam ? `?category=${categoryParam}` : ''}`}
+        canonical={`https://www.tanviimpex.com/products${categoryParam ? `?category=${categoryParam}` : ''}`}
       />
       
       {/* Top Breadcrumb & Page Banner */}

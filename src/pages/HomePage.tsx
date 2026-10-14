@@ -18,7 +18,7 @@ export const HomePage: React.FC = () => {
       <SEO
         title="Tanvi Impex | Wholesale California Almonds, Irani Pistachios & Dry Fruits Importer Mumbai"
         description="Premier importer, trader and bulk distributor of California Almonds, Nútböld Almonds, Irani & California Pistachios, Pumpkin, Sunflower & Chia Seeds in APMC Market, Navi Mumbai."
-        canonical="https://tanviimpex.com/"
+        canonical="https://www.tanviimpex.com/"
       />
       {/* Hero Banner */}
       <Hero />

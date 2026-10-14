@@ -24,4 +24,4 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
-Sitemap: https://tanviimpex.com/sitemap.xml
+Sitemap: https://www.tanviimpex.com/sitemap.xml

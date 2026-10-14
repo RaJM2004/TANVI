@@ -6,6 +6,7 @@ interface SEOProps {
   description?: string;
   canonical?: string;
   ogType?: string;
+  ogImage?: string;
 }
 
 export const SEO: React.FC<SEOProps> = ({
@@ -13,9 +14,10 @@ export const SEO: React.FC<SEOProps> = ({
   description = 'Leading importer, trader and bulk distributor of California Almonds, Nútböld Almonds, Irani & California Pistachios, Pumpkin Seeds, Sunflower Seeds & Chia Seeds based in APMC Market, Navi Mumbai.',
   canonical,
   ogType = 'website',
+  ogImage = 'https://www.tanviimpex.com/og-image.jpg',
 }) => {
   const location = useLocation();
-  const currentCanonical = canonical || `https://tanviimpex.com${location.pathname === '/' ? '/' : location.pathname}`;
+  const currentCanonical = canonical || `https://www.tanviimpex.com${location.pathname === '/' ? '/' : location.pathname}`;
 
   useEffect(() => {
     // Update Title
@@ -50,12 +52,15 @@ export const SEO: React.FC<SEOProps> = ({
     setMetaTag('property', 'og:description', description);
     setMetaTag('property', 'og:url', currentCanonical);
     setMetaTag('property', 'og:type', ogType);
+    setMetaTag('property', 'og:image', ogImage);
+    setMetaTag('property', 'og:image:secure_url', ogImage);
 
     // Twitter
     setMetaTag('property', 'twitter:title', title);
     setMetaTag('property', 'twitter:description', description);
     setMetaTag('property', 'twitter:url', currentCanonical);
-  }, [title, description, currentCanonical, ogType]);
+    setMetaTag('property', 'twitter:image', ogImage);
+  }, [title, description, currentCanonical, ogType, ogImage]);
 
   return null;
 };
