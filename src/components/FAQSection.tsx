@@ -35,7 +35,7 @@ export const FAQSection = () => {
   return (
     <section className="py-24 bg-white" id="faq">
       <div className="max-w-4xl mx-auto px-6">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -49,7 +49,7 @@ export const FAQSection = () => {
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -70,7 +70,7 @@ export const FAQSection = () => {
                   <ChevronDown size={20} />
                 </motion.div>
               </button>
-              
+
               <AnimatePresence>
                 {openIndex === index && (
                   <motion.div
