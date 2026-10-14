@@ -135,24 +135,24 @@ export const AboutUs = () => {
               Crafting purity through nature's finest.
             </h2>
             
-            <div className="space-y-6 text-white/70 text-lg leading-relaxed">
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.1 }}
-              >
-                Established in 2019 and headquartered in Navi Mumbai, Tanvi Impex has quickly grown to become a leading wholesaler, trader, and distributor of premium California Almonds, Pistachios, and Dry Fruits.
-              </motion.p>
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.25 }}
-              >
-                Operating from the heart of the APMC market region, we are dedicated to sourcing the finest quality dry fruits directly from trusted farms. Our commitment to uncompromising quality ensures that every product reaching your table is a testament to nature's perfection.
-              </motion.p>
-            </div>
+              <div className="space-y-6 text-white/70 text-lg leading-relaxed">
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.1 }}
+                >
+                  Established in 2019 under the visionary leadership of CEO <span className="text-white font-medium">Bhushan Gajra</span>, Tanvi Impex is a premier direct importer, wholesale trader, and bulk distributor specializing in California Almonds, authentic Irani Pistachios, and nutrient-dense superfood seeds.
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.25 }}
+                >
+                  Headquartered at <span className="text-white font-medium">Ground Floor, H-33, APMC Market-1, Sector-19, Phase-2, Vashi, Navi Mumbai</span>, we operate direct container consignments from certified growers in California and Iran, providing transparent APMC mandi wholesale rates and reliable cold-chain supply across 23 Indian states. Verified by FSSAI and IndiaMART TrustSEAL with a proven 4.4★ rating.
+                </motion.p>
+              </div>
             
             <motion.button 
               whileHover={{ scale: 1.05 }}

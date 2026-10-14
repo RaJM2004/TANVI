@@ -75,7 +75,7 @@ export const LocationMap: React.FC = () => {
                     Tanvi Impex
                   </h3>
                   <span className="text-[11px] font-semibold text-[#C28E3A] uppercase tracking-wider block mt-0.5">
-                    H - 60 • APMC Market - 1
+                    H - 33 • APMC Market - 1
                   </span>
                 </div>
 
