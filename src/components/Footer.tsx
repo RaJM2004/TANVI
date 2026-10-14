@@ -90,7 +90,7 @@ export const Footer = () => {
   }, []);
 
   return (
-    <footer ref={footerRef} className="bg-black text-white pt-24 pb-12 border-t border-white/10 relative overflow-hidden">
+    <footer id="contact" ref={footerRef} className="bg-black text-white pt-24 pb-12 border-t border-white/10 relative overflow-hidden">
       {/* Animated background gradient */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
