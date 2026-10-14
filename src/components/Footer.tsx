@@ -1,6 +1,6 @@
 
-import { useRef, useEffect } from 'react';
-import { MapPin, Phone, Mail, CheckCircle, Store } from 'lucide-react';
+import { useRef, useEffect, useState } from 'react';
+import { MapPin, Phone, Mail, CheckCircle, Store, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -10,6 +10,53 @@ gsap.registerPlugin(ScrollTrigger);
 export const Footer = () => {
   const footerRef = useRef<HTMLElement>(null);
   const columnsRef = useRef<HTMLDivElement>(null);
+
+  const [newsletterEmail, setNewsletterEmail] = useState('');
+  const [newsletterStatus, setNewsletterStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [newsletterMessage, setNewsletterMessage] = useState('');
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const cleanEmail = newsletterEmail.trim();
+    if (!cleanEmail || !cleanEmail.includes('@')) {
+      setNewsletterStatus('error');
+      setNewsletterMessage('Please enter a valid email address.');
+      return;
+    }
+
+    setNewsletterStatus('loading');
+    setNewsletterMessage('');
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/accounts@tanviimpex.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          email: cleanEmail,
+          _subject: `New Newsletter Subscription - ${cleanEmail}`,
+          _template: 'table',
+          _captcha: 'false',
+          subscriber_email: cleanEmail,
+          timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+          note: 'Subscriber entered their email in the Tanvi Impex website footer newsletter form.',
+        }),
+      });
+
+      if (response.ok) {
+        setNewsletterStatus('success');
+        setNewsletterMessage('Thank you for subscribing! We will keep you updated.');
+        setNewsletterEmail('');
+      } else {
+        throw new Error('Submission failed');
+      }
+    } catch {
+      setNewsletterStatus('error');
+      setNewsletterMessage('Could not submit automatically. Please click below to email us:');
+    }
+  };
 
   useEffect(() => {
     if (!columnsRef.current) return;
@@ -158,19 +205,80 @@ export const Footer = () => {
           {/* Newsletter */}
           <div>
             <h4 className="text-lg font-bold mb-6 font-serif tracking-wide text-[#C28E3A]">Newsletter</h4>
-            <p className="text-white/60 mb-4">Subscribe to receive updates, access to exclusive deals, and more.</p>
-            <div className="flex">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="bg-white/5 border border-white/10 px-4 py-3 rounded-l-lg w-full focus:outline-none focus:border-[#C28E3A] text-white transition-colors duration-300"
-              />
-              <button className="subscribe-btn bg-[#C28E3A] text-white px-6 py-3 rounded-r-lg font-bold tracking-widest uppercase text-xs hover:bg-white hover:text-black transition-colors relative overflow-hidden group">
-                <span className="relative z-10">Subscribe</span>
-                {/* Ripple effect container */}
-                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-white transition-transform duration-500" />
-              </button>
-            </div>
+            <p className="text-white/60 mb-4">Subscribe to receive updates, access to exclusive wholesale deals, and more.</p>
+
+            {newsletterStatus === 'success' ? (
+              <div className="bg-emerald-950/40 border border-emerald-500/30 rounded-xl p-4 text-emerald-300">
+                <div className="flex items-center gap-2 font-semibold text-emerald-400 mb-1">
+                  <CheckCircle2 size={18} className="shrink-0" />
+                  <span>Subscribed Successfully!</span>
+                </div>
+                <p className="text-xs text-white/70 leading-relaxed mb-3">
+                  Thank you for subscribing. We will send wholesale updates & exclusive deals to your inbox.
+                </p>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setNewsletterStatus('idle');
+                    setNewsletterMessage('');
+                  }}
+                  className="text-xs text-[#C28E3A] hover:underline hover:text-white transition-colors"
+                >
+                  Subscribe another email &rarr;
+                </button>
+              </div>
+            ) : (
+              <form onSubmit={handleNewsletterSubmit} className="space-y-2">
+                <div className="flex">
+                  <input
+                    type="email"
+                    required
+                    value={newsletterEmail}
+                    onChange={(e) => {
+                      setNewsletterEmail(e.target.value);
+                      if (newsletterStatus === 'error') setNewsletterStatus('idle');
+                    }}
+                    placeholder="Enter your email"
+                    disabled={newsletterStatus === 'loading'}
+                    className="bg-white/5 border border-white/10 px-4 py-3 rounded-l-lg w-full focus:outline-none focus:border-[#C28E3A] text-white placeholder-white/40 transition-colors duration-300 disabled:opacity-50 text-sm"
+                  />
+                  <button
+                    type="submit"
+                    disabled={newsletterStatus === 'loading'}
+                    className="subscribe-btn bg-[#C28E3A] text-white px-5 py-3 rounded-r-lg font-bold tracking-widest uppercase text-xs hover:bg-white hover:text-black transition-colors relative overflow-hidden group shrink-0 flex items-center justify-center min-w-[100px] disabled:opacity-75"
+                  >
+                    {newsletterStatus === 'loading' ? (
+                      <Loader2 size={16} className="animate-spin text-white" />
+                    ) : (
+                      <>
+                        <span className="relative z-10">Subscribe</span>
+                        <div className="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-white transition-transform duration-500" />
+                      </>
+                    )}
+                  </button>
+                </div>
+
+                {newsletterStatus === 'error' && (
+                  <div className="p-3 bg-red-950/40 border border-red-500/30 rounded-lg text-xs text-red-300 space-y-1.5">
+                    <div className="flex items-center gap-1.5 text-red-400 font-medium">
+                      <AlertCircle size={14} className="shrink-0" />
+                      <span>{newsletterMessage}</span>
+                    </div>
+                    <a
+                      href={`mailto:accounts@tanviimpex.com?subject=Newsletter%20Subscription&body=Please%20add%20my%20email%20to%20the%20Tanvi%20Impex%20newsletter%3A%20${encodeURIComponent(
+                        newsletterEmail
+                      )}`}
+                      className="inline-block text-[#C28E3A] hover:underline font-semibold"
+                    >
+                      Click here to email accounts@tanviimpex.com directly
+                    </a>
+                  </div>
+                )}
+                <p className="text-[11px] text-white/40">
+                  Submissions are sent directly to accounts@tanviimpex.com
+                </p>
+              </form>
+            )}
           </div>
 
         </div>
