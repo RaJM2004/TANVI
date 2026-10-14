@@ -173,6 +173,42 @@ export const Footer = () => {
                 <CheckCircle size={20} className="shrink-0 text-[#C28E3A]" />
                 <span>FSSAI: 11522998001006</span>
               </li>
+              <li className="pt-2 flex flex-wrap items-center gap-2.5">
+                <a
+                  href="https://www.indiamart.com/tanviimpexnavimumbai/profile.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-white px-3 py-1.5 rounded-lg border border-white/20 transition-transform hover:scale-105"
+                  title="Verify IndiaMART TrustSEAL Certificate"
+                >
+                  <img
+                    src="/indiamart-logo.webp"
+                    alt="IndiaMART"
+                    className="h-5 w-auto object-contain"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span className="text-[11px] font-bold text-gray-800">
+                    <span className="text-[#2E3192]">india<span className="text-[#00A699]">mart</span></span>
+                    <span className="text-[#00A699] ml-1">TrustSEAL</span>
+                  </span>
+                </a>
+                <div
+                  className="inline-flex items-center gap-2 bg-white px-3 py-1.5 rounded-lg border border-white/20 transition-transform hover:scale-105"
+                  title="FSSAI Food Safety Certified License No. 11522998001006"
+                >
+                  <img
+                    src="/fssai-logo.webp"
+                    alt="FSSAI License 11522998001006"
+                    className="h-5 w-auto object-contain"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span className="text-[10px] font-mono font-bold text-gray-800">
+                    11522998001006
+                  </span>
+                </div>
+              </li>
               <li className="mt-4 pt-4 border-t border-white/10">
                 <a href="tel:02249608280" className="flex gap-3 items-center group hover:text-[#C28E3A] transition-colors w-fit">
                   <Phone size={20} className="shrink-0 text-[#C28E3A] group-hover:scale-110 transition-transform" />

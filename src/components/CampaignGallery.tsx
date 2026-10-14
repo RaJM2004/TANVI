@@ -13,12 +13,14 @@ export const CampaignGallery: React.FC = () => {
             className="group block w-full cursor-pointer relative"
           >
             <img
-              src="/California%20Pistachio%20Premium%20Nature%20Banner.png"
+              src="/California%20Pistachio%20Premium%20Nature%20Banner.webp"
+              loading="lazy"
+              decoding="async"
               onError={(e) => {
                 const target = e.currentTarget;
                 if (!target.dataset.tried) {
                   target.dataset.tried = 'true';
-                  target.src = '/California Pistachio Premium Nature Banner.png';
+                  target.src = '/California%20Pistachio%20Premium%20Nature%20Banner.png';
                 }
               }}
               alt="California Pistachio Premium Nature Banner"
@@ -35,7 +37,16 @@ export const CampaignGallery: React.FC = () => {
               className="group block w-full cursor-pointer relative"
             >
               <img
-                src="/Special Selected Almonds Poster.png"
+                src="/Special Selected Almonds Poster.webp"
+                loading="lazy"
+                decoding="async"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.dataset.tried) {
+                    target.dataset.tried = 'true';
+                    target.src = '/Special Selected Almonds Poster.png';
+                  }
+                }}
                 alt="Special Selected Almonds Poster"
                 className="w-full h-auto block transition-opacity duration-300 group-hover:opacity-95"
               />
@@ -47,7 +58,16 @@ export const CampaignGallery: React.FC = () => {
               className="group block w-full cursor-pointer relative"
             >
               <img
-                src="/Nature’s Goodness_ Irani Pistachios.png"
+                src="/Nature’s Goodness_ Irani Pistachios.webp"
+                loading="lazy"
+                decoding="async"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.dataset.tried) {
+                    target.dataset.tried = 'true';
+                    target.src = '/Nature’s Goodness_ Irani Pistachios.png';
+                  }
+                }}
                 alt="Nature’s Goodness Irani Pistachios"
                 className="w-full h-auto block transition-opacity duration-300 group-hover:opacity-95"
               />
@@ -63,7 +83,16 @@ export const CampaignGallery: React.FC = () => {
               className="group block w-full cursor-pointer relative"
             >
               <img
-                src="/Premium Sunflower Seeds Banner.png"
+                src="/Premium Sunflower Seeds Banner.webp"
+                loading="lazy"
+                decoding="async"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.dataset.tried) {
+                    target.dataset.tried = 'true';
+                    target.src = '/Premium Sunflower Seeds Banner.png';
+                  }
+                }}
                 alt="Premium Sunflower Seeds Banner"
                 className="w-full h-auto block transition-opacity duration-300 group-hover:opacity-95"
               />
@@ -75,7 +104,16 @@ export const CampaignGallery: React.FC = () => {
               className="group block w-full cursor-pointer relative"
             >
               <img
-                src="/Premium Pumpkin Seeds, Naturally Pure.png"
+                src="/Premium Pumpkin Seeds, Naturally Pure.webp"
+                loading="lazy"
+                decoding="async"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.dataset.tried) {
+                    target.dataset.tried = 'true';
+                    target.src = '/Premium Pumpkin Seeds, Naturally Pure.png';
+                  }
+                }}
                 alt="Premium Pumpkin Seeds, Naturally Pure"
                 className="w-full h-auto block transition-opacity duration-300 group-hover:opacity-95"
               />

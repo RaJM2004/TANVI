@@ -7,7 +7,7 @@ import gsap from 'gsap';
 const slides = [
   {
     id: 0,
-    image: '/hero1.png',
+    image: '/hero1.webp',
     subtitle: 'Pure Nutrition. Premium Quality.',
     title: 'Almonds',
     highlight: 'Natural & Healthy',
@@ -15,7 +15,7 @@ const slides = [
   },
   {
     id: 1,
-    image: '/hero2.png',
+    image: '/hero2.webp',
     subtitle: 'Exquisite Taste. Unmatched Purity.',
     title: 'Premium',
     highlight: 'Dry Fruits & Spices',
@@ -23,7 +23,7 @@ const slides = [
   },
   {
     id: 2,
-    image: '/hero3.png',
+    image: '/hero3.webp',
     subtitle: 'Global Export & Wholesale.',
     title: 'Trusted',
     highlight: 'Global Supply',
@@ -31,7 +31,7 @@ const slides = [
   },
   {
     id: 3,
-    image: '/hero4.png',
+    image: '/hero4.webp',
     subtitle: '100% Organic & Pure.',
     title: 'Nature\'s',
     highlight: 'Best Selection',
@@ -39,7 +39,7 @@ const slides = [
   },
   {
     id: 4,
-    image: '/hero5.png',
+    image: '/hero5.webp',
     subtitle: 'Meticulously Selected.',
     title: 'Handpicked',
     highlight: 'Gourmet Quality',
@@ -47,7 +47,7 @@ const slides = [
   },
   {
     id: 5,
-    image: '/hero6.png',
+    image: '/hero6.webp',
     subtitle: 'Health & Wellness.',
     title: 'Fuel Your',
     highlight: 'Active Lifestyle',
@@ -55,7 +55,7 @@ const slides = [
   },
   {
     id: 6,
-    image: '/hero7.png',
+    image: '/hero7.webp',
     subtitle: 'The Ultimate Collection.',
     title: 'Excellence',
     highlight: 'Uncompromised',
@@ -113,6 +113,13 @@ export const Hero: React.FC = () => {
     return () => clearInterval(timer);
   }, []);
 
+  // Dynamically preload the next slide image ahead of time so slide transitions are instantaneous
+  useEffect(() => {
+    const nextIndex = (current + 1) % slides.length;
+    const nextImg = new Image();
+    nextImg.src = slides[nextIndex].image;
+  }, [current]);
+
   // CTA shimmer animation
   useEffect(() => {
     if (!ctaRef.current) return;
@@ -155,6 +162,9 @@ export const Hero: React.FC = () => {
             key={current}
             src={slides[current].image}
             alt={slides[current].title}
+            loading={current === 0 ? "eager" : "lazy"}
+            fetchPriority={current === 0 ? "high" : "auto"}
+            decoding="async"
             initial={{ opacity: 0, scale: 1.1 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}

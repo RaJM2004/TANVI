@@ -3,7 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 import { FeaturedProducts } from '../components/FeaturedProducts';
 import { Footer } from '../components/Footer';
-import { ShieldCheck, Phone, Store, ArrowLeft, Sparkles, CheckCircle2 } from 'lucide-react';
+import { Phone, Store, ArrowLeft, Sparkles, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const ProductsPage: React.FC = () => {
@@ -41,13 +41,42 @@ export const ProductsPage: React.FC = () => {
             <span className="text-[#C28E3A] font-semibold">Products Catalog</span>
           </div>
 
-          <div className="flex items-center gap-4 text-xs">
-            <span className="inline-flex items-center gap-1 text-[#0F5A3B] font-semibold bg-[#0F5A3B]/10 px-3 py-1 rounded-full">
-              <ShieldCheck size={14} />
-              IndiaMART TrustSEAL Verified
-            </span>
-            <span className="hidden sm:inline text-black/40">|</span>
-            <span className="hidden sm:inline font-mono">FSSAI: 11522998001006</span>
+          <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
+            <a
+              href="https://www.indiamart.com/tanviimpexnavimumbai/profile.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-white px-3 py-1.5 rounded-full border border-black/10 shadow-sm hover:border-[#00A699]/60 hover:shadow-md transition-all hover:scale-105"
+              title="Verify IndiaMART TrustSEAL Certificate"
+            >
+              <img
+                src="/indiamart-logo.webp"
+                alt="IndiaMART"
+                className="h-5 sm:h-6 w-auto object-contain"
+                loading="eager"
+                decoding="async"
+              />
+              <span className="text-xs font-semibold text-gray-800 flex items-center gap-1.5">
+                <span className="font-bold text-[#2E3192]">india<span className="text-[#00A699]">mart</span></span>
+                <span className="text-[10.5px] bg-[#00A699]/15 text-[#00A699] font-bold px-1.5 py-0.5 rounded">TrustSEAL Verified</span>
+              </span>
+            </a>
+
+            <div
+              className="inline-flex items-center gap-2 bg-white px-3 py-1.5 rounded-full border border-black/10 shadow-sm hover:shadow-md transition-all hover:scale-105"
+              title="FSSAI Food Safety Certified License No. 11522998001006"
+            >
+              <img
+                src="/fssai-logo.webp"
+                alt="FSSAI Food Safety"
+                className="h-5 sm:h-6 w-auto object-contain"
+                loading="eager"
+                decoding="async"
+              />
+              <span className="text-xs font-mono font-bold text-gray-800">
+                Lic: 11522998001006
+              </span>
+            </div>
           </div>
         </div>
       </div>

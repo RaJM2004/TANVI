@@ -25,7 +25,7 @@ const categories = [
   {
     id: 'seeds',
     name: 'Seeds',
-    image: '/category-seeds.png',
+    image: '/category-seeds.webp',
   },
 ];
 
@@ -42,7 +42,7 @@ const products = [
       badge: "15kg Bag",
       wholesaleOnlyNotice: "Wholesale Bulk Supply • Sold as 15kg Master Bag • Not Sold as Single Pieces",
     },
-    image: "/hero3.png",
+    image: "/hero3.webp",
     bg: "from-[#F7F0E4] to-[#EDE2CC]",
     url: "https://www.indiamart.com/tanviimpexnavimumbai/almond-nuts.html#2849741926197",
     theme: "legacy",
@@ -61,7 +61,7 @@ const products = [
       badge: "15kg Bag",
       wholesaleOnlyNotice: "Wholesale Bulk Supply • Sold as 15kg Bulk Pack • Not Sold as Single Pieces",
     },
-    image: "/Premium%2015%20kg%20Almond%20Bag%20Display.png",
+    image: "/Premium%2015%20kg%20Almond%20Bag%20Display.webp",
     bg: "from-[#FAF3E7] to-[#EDE0C9]",
     url: "https://www.indiamart.com/tanviimpexnavimumbai/california-almonds.html#2851925363948",
     theme: "portrait",
@@ -80,7 +80,7 @@ const products = [
       badge: "15kg Bag",
       wholesaleOnlyNotice: "Wholesale Bulk Supply • Sold as 15kg Master Box • Not Sold as Single Pieces",
     },
-    image: "/hero1.png",
+    image: "/hero1.webp",
     bg: "from-[#FDF6EC] to-[#F5E6D0]",
     url: "https://www.indiamart.com/tanviimpexnavimumbai/california-almonds.html#2851925363948",
     theme: "legacy",
@@ -99,7 +99,7 @@ const products = [
       badge: "15kg Master Box",
       wholesaleOnlyNotice: "Wholesale Bulk Supply • Sold as 15kg Master Box • Not Sold as Single Pieces",
     },
-    image: "/Premium BRAINNUT Almonds in Nature.png",
+    image: "/Premium BRAINNUT Almonds in Nature.webp",
     bg: "from-[#FDF6EC] to-[#F5E6D0]",
     url: "https://www.indiamart.com/tanviimpexnavimumbai/california-almonds.html#2851925363948",
     theme: "landscape",
@@ -118,7 +118,7 @@ const products = [
       badge: "15kg Master Box",
       wholesaleOnlyNotice: "Wholesale Bulk Supply • Sold as 15kg Master Box • Not Sold as Single Pieces",
     },
-    image: "/Nútböld Almond Carton in Sunlit Nature.png",
+    image: "/Nútböld Almond Carton in Sunlit Nature.webp",
     bg: "from-[#F7F0E4] to-[#EDE2CC]",
     url: "https://www.indiamart.com/tanviimpexnavimumbai/almond-nuts.html#2849741926197",
     theme: "landscape",
@@ -139,7 +139,7 @@ const products = [
       badge: "15kg (5kg × 3 pac)",
       wholesaleOnlyNotice: "Wholesale Only • Sold as 15kg Master Pack (3 × 5kg packs) • Single 5kg pack not sold separately",
     },
-    image: "/Premium Almonds Rustic Packaging.png",
+    image: "/Premium Almonds Rustic Packaging.webp",
     bg: "from-[#F5EEDC] to-[#E5D7BC]",
     url: "https://www.indiamart.com/tanviimpexnavimumbai/california-almonds.html#2851925363948",
     theme: "square",
@@ -158,7 +158,7 @@ const products = [
       badge: "15kg Bag",
       wholesaleOnlyNotice: "Wholesale Bulk Supply • Sold as 15kg Master Bag • Not Sold as Single Pieces",
     },
-    image: "/BRAINNUT%2015KG%20Almonds%20Showcase.png",
+    image: "/BRAINNUT%2015KG%20Almonds%20Showcase.webp",
     bg: "from-[#F0EDE6] to-[#E4DDD0]",
     url: "https://www.indiamart.com/tanviimpexnavimumbai/dry-fruits.html#2851925299912",
     theme: "landscape",
@@ -177,7 +177,7 @@ const products = [
       badge: "30kg Bulk Bag",
       wholesaleOnlyNotice: "Wholesale Bulk Supply • Sold as 30kg Master Bag • Not Sold as Single Pieces",
     },
-    image: "/hero6.png",
+    image: "/hero6.webp",
     bg: "from-[#F9F5EE] to-[#EFE4D2]",
     url: "https://www.indiamart.com/tanviimpexnavimumbai/dry-almond.html#2851925479030",
     theme: "legacy",
@@ -199,7 +199,7 @@ const products = [
       badge: "20kg (1kg × 20 pac)",
       wholesaleOnlyNotice: "Wholesale Only • Sold as 20kg Master Carton (20 × 1kg) • Single 1kg pack not sold separately",
     },
-    image: "/Premium Irani Pistachio Pouch.png",
+    image: "/Premium Irani Pistachio Pouch.webp",
     bg: "from-[#EEF2E6] to-[#DBE2CF]",
     url: "https://www.indiamart.com/tanviimpexnavimumbai/roasted-pistachio.html#2858557187773",
     theme: "square",
@@ -220,7 +220,7 @@ const products = [
       badge: "20kg (1kg × 20 pac)",
       wholesaleOnlyNotice: "Wholesale Only • Sold as 20kg Master Carton (20 × 1kg) • Single 1kg pack not sold separately",
     },
-    image: "/Premium Salted Pistachio Packshot.png",
+    image: "/Premium Salted Pistachio Packshot.webp",
     bg: "from-[#EDEEE6] to-[#D9DBC8]",
     url: "https://www.indiamart.com/tanviimpexnavimumbai/roasted-pistachio.html#2858557187773",
     theme: "square",
@@ -241,7 +241,7 @@ const products = [
       badge: "10kg (250g × 40 pac)",
       wholesaleOnlyNotice: "Wholesale Only • Sold as 10kg Master Carton (40 × 250g) • Single 250g pack not sold separately",
     },
-    image: "/Premium California Pistachio Pouch.png",
+    image: "/Premium California Pistachio Pouch.webp",
     bg: "from-[#F2F5EB] to-[#E0E7D6]",
     url: "https://www.indiamart.com/tanviimpexnavimumbai/pistachio-nut.html#2858557187655",
     theme: "square",
@@ -262,7 +262,7 @@ const products = [
       badge: "10kg (250g × 40 pac)",
       wholesaleOnlyNotice: "Wholesale Only • Sold as 10kg Master Carton (40 × 250g) • Single 250g pack not sold separately",
     },
-    image: "/hero8.png",
+    image: "/hero8.webp",
     bg: "from-[#EDEEE6] to-[#D9DBC8]",
     url: "https://www.indiamart.com/tanviimpexnavimumbai/roasted-pistachio.html#2858557187773",
     theme: "legacy",
@@ -282,7 +282,7 @@ const products = [
       badge: "12.5kg Bulk Bag",
       wholesaleOnlyNotice: "Wholesale Bulk Supply • Sold as 12.5kg Master Pack • Not Sold as Single Pieces",
     },
-    image: "/Premium Pumpkin Seeds Harvest Display.png",
+    image: "/Premium Pumpkin Seeds Harvest Display.webp",
     bg: "from-[#F5EDE4] to-[#E8DBCB]",
     url: "https://www.indiamart.com/tanviimpexnavimumbai/pumpkin-seeds-g.html#2858557187812",
     theme: "landscape",
@@ -301,7 +301,7 @@ const products = [
       badge: "12.5kg Bulk Bag",
       wholesaleOnlyNotice: "Wholesale Bulk Supply • Sold as 12.5kg Master Pack • Not Sold as Single Pieces",
     },
-    image: "/Premium Sunflower Seeds Packaging in Nature.png",
+    image: "/Premium Sunflower Seeds Packaging in Nature.webp",
     bg: "from-[#FDF9EE] to-[#EFE7D0]",
     url: "https://www.indiamart.com/tanviimpexnavimumbai/dry-fruits.html#2851925299912",
     theme: "landscape",
@@ -320,7 +320,7 @@ const products = [
       badge: "25kg Bulk Bag",
       wholesaleOnlyNotice: "Wholesale Bulk Supply • Sold as 25kg Bulk Master Bag • Not Sold as Single Pieces",
     },
-    image: "/hero11.png",
+    image: "/hero11.webp",
     bg: "from-[#ECF0E6] to-[#D5DCCA]",
     url: "https://www.indiamart.com/tanviimpexnavimumbai/chia-seed.html#2858557187962",
     theme: "legacy",
@@ -459,6 +459,8 @@ const ProductSection = ({
               >
                 <img
                   src={product.image}
+                  loading="lazy"
+                  decoding="async"
                   alt={product.title.replace('\n', ' ')}
                   className="w-full h-full object-cover object-center rounded-3xl shadow-2xl border border-black/5"
                 />
@@ -516,6 +518,8 @@ const ProductSection = ({
               >
                 <img
                   src={product.image}
+                  loading="lazy"
+                  decoding="async"
                   alt={product.title.replace('\n', ' ')}
                   className={`w-full h-full object-cover ${product.theme === 'legacy' ? 'object-[80%_center]' : 'object-center'} rounded-3xl shadow-2xl`}
                   onError={(e) => {
@@ -660,6 +664,8 @@ export const FeaturedProducts = () => {
                   >
                     <img
                       src={cat.image}
+                      loading="lazy"
+                      decoding="async"
                       alt={cat.name}
                       className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
                     />

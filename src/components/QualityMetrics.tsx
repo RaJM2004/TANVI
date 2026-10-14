@@ -26,7 +26,16 @@ export const QualityMetrics: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         <div className="w-full overflow-hidden">
           <img
-            src="/The Tanvi Impex Promise.png"
+            src="/The Tanvi Impex Promise.webp"
+            loading="lazy"
+            decoding="async"
+            onError={(e) => {
+              const target = e.currentTarget;
+              if (!target.dataset.tried) {
+                target.dataset.tried = 'true';
+                target.src = '/The Tanvi Impex Promise.png';
+              }
+            }}
             alt="The Tanvi Impex Promise - 100% Natural, Export Quality, Rich in Nutrition, Premium Grade"
             className="w-full h-auto block"
           />

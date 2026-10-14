@@ -27,6 +27,18 @@ export const Navigation: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Prevent background scrolling while mobile navigation drawer is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   const handleNavClick = (e: React.MouseEvent, link: typeof navLinks[0]) => {
     e.preventDefault();
     setIsOpen(false);
@@ -64,13 +76,15 @@ export const Navigation: React.FC = () => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      className={`fixed top-0 w-full z-50 flex justify-center transition-all duration-700 px-4 sm:px-6 pointer-events-none ${
+      className={`fixed top-0 w-full z-[1000] flex justify-center transition-all duration-700 px-4 sm:px-6 pointer-events-none ${
         scrolled ? 'py-4' : 'py-6'
       }`}
     >
       <div 
-        className={`w-full max-w-7xl flex items-center justify-between transition-all duration-700 pointer-events-auto rounded-[2rem] ${
-          scrolled 
+        className={`w-full max-w-7xl flex items-center justify-between transition-all duration-700 pointer-events-auto rounded-[2rem] relative z-[1002] ${
+          isOpen
+            ? 'bg-white shadow-[0_12px_36px_rgba(0,0,0,0.18)] border border-gray-200 px-6 py-3'
+            : scrolled 
             ? 'bg-white/90 backdrop-blur-2xl shadow-[0_8px_32px_0_rgba(0,0,0,0.08)] border border-white/50 px-6 py-3' 
             : 'bg-white/50 backdrop-blur-md shadow-sm border border-white/30 px-6 py-3'
         }`}
@@ -186,7 +200,12 @@ export const Navigation: React.FC = () => {
         
         {/* Mobile menu toggle */}
         <motion.button 
-          className="md:hidden relative w-12 h-12 flex items-center justify-center rounded-full bg-white/90 backdrop-blur-md border border-gray-200 shadow-sm z-50 text-black"
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+          className={`md:hidden relative w-12 h-12 flex items-center justify-center rounded-full transition-colors z-50 ${
+            isOpen 
+              ? 'bg-[#C28E3A] text-white shadow-lg' 
+              : 'bg-white/90 backdrop-blur-md border border-gray-200 shadow-sm text-black'
+          }`}
           onClick={() => setIsOpen(!isOpen)}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -211,70 +230,82 @@ export const Navigation: React.FC = () => {
         </motion.button>
       </div>
 
-      {/* Mobile Menu Dropdown */}
+      {/* Mobile Menu Dropdown & Dimming Backdrop */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -10, scale: 0.98, filter: 'blur(10px)' }}
-            animate={{ opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' }}
-            exit={{ opacity: 0, y: -10, scale: 0.98, filter: 'blur(10px)' }}
-            transition={{ type: "spring", bounce: 0, duration: 0.4 }}
-            className="absolute top-[88px] left-4 right-4 md:hidden pointer-events-auto bg-white/95 backdrop-blur-3xl rounded-3xl shadow-[0_20px_40px_-10px_rgba(0,0,0,0.1)] border border-gray-200 overflow-hidden"
-          >
-            <div className="p-7 flex flex-col gap-1">
-              {navLinks.map((link, i) => {
-                const isCurrentPage = link.isPage && location.pathname === link.path;
+          <>
+            {/* Dark dimming backdrop to conceal background content and allow tap-to-close */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              onClick={() => setIsOpen(false)}
+              className="fixed inset-0 bg-black/75 backdrop-blur-md pointer-events-auto z-[999]"
+            />
 
-                return (
-                  <motion.a
-                    key={link.name}
-                    href={link.path}
-                    onClick={(e) => handleNavClick(e, link)}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: i * 0.08, type: "spring", stiffness: 300, damping: 25 }}
-                    className={`font-bold text-[1.4rem] py-3.5 border-b border-black/5 hover:translate-x-2 transition-all duration-300 flex items-center justify-between ${
-                      isCurrentPage ? 'text-[#C28E3A]' : 'text-gray-900 hover:text-[#C28E3A]'
-                    }`}
-                  >
-                    <span>{link.name}</span>
-                    {isCurrentPage && <span className="text-xs bg-[#C28E3A]/10 text-[#C28E3A] px-2.5 py-1 rounded-full uppercase tracking-wider font-semibold">Active</span>}
-                  </motion.a>
-                );
-              })}
-              
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, type: "spring" }}
-                className="mt-6 flex flex-col gap-4"
-              >
-                <div className="flex justify-around py-5 bg-gray-50/80 rounded-2xl border border-black/5">
-                  <motion.a whileTap={{ scale: 0.95 }} href="tel:02249608280" className="flex flex-col items-center gap-2.5 text-sm font-semibold text-gray-700">
-                    <div className="p-3.5 bg-white rounded-full shadow-sm text-black"><Phone size={20} /></div>
-                    Call Us
-                  </motion.a>
-                  <motion.a whileTap={{ scale: 0.95 }} href="mailto:accounts@tanviimpex.com" className="flex flex-col items-center gap-2.5 text-sm font-semibold text-gray-700">
-                    <div className="p-3.5 bg-white rounded-full shadow-sm text-black"><Mail size={20} /></div>
-                    Email Us
-                  </motion.a>
-                </div>
-                <motion.a
-                  href="https://wa.me/918082111250"
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  onClick={() => setIsOpen(false)}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full flex items-center justify-center gap-2 px-6 py-4.5 font-bold text-lg bg-gradient-to-r from-[#C28E3A] to-[#D4AF37] hover:from-[#b07f32] hover:to-[#bfa132] text-white rounded-2xl text-center shadow-[0_8px_20px_-6px_rgba(194,142,58,0.5)] transition-all"
+            <motion.div
+              initial={{ opacity: 0, y: -10, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -10, scale: 0.98 }}
+              transition={{ type: "spring", bounce: 0, duration: 0.35 }}
+              className="absolute top-[116px] left-4 right-4 md:hidden pointer-events-auto bg-[#FAF7F2] rounded-3xl shadow-[0_25px_60px_-10px_rgba(0,0,0,0.5)] border border-[#C28E3A]/25 overflow-hidden max-h-[calc(100vh-140px)] overflow-y-auto z-[1001]"
+            >
+              <div className="p-7 flex flex-col gap-1">
+                {navLinks.map((link, i) => {
+                  const isCurrentPage = link.isPage && location.pathname === link.path;
+
+                  return (
+                    <motion.a
+                      key={link.name}
+                      href={link.path}
+                      onClick={(e) => handleNavClick(e, link)}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: i * 0.08, type: "spring", stiffness: 300, damping: 25 }}
+                      className={`font-bold text-[1.4rem] py-3.5 border-b border-black/5 hover:translate-x-2 transition-all duration-300 flex items-center justify-between ${
+                        isCurrentPage ? 'text-[#C28E3A]' : 'text-gray-900 hover:text-[#C28E3A]'
+                      }`}
+                    >
+                      <span>{link.name}</span>
+                      {isCurrentPage && <span className="text-xs bg-[#C28E3A]/10 text-[#C28E3A] px-2.5 py-1 rounded-full uppercase tracking-wider font-semibold">Active</span>}
+                    </motion.a>
+                  );
+                })}
+                
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4, type: "spring" }}
+                  className="mt-6 flex flex-col gap-4"
                 >
-                  Chat on WhatsApp
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
-                </motion.a>
-              </motion.div>
-            </div>
-          </motion.div>
+                  <div className="flex justify-around py-5 bg-white rounded-2xl border border-black/5 shadow-sm">
+                    <motion.a whileTap={{ scale: 0.95 }} href="tel:02249608280" className="flex flex-col items-center gap-2.5 text-sm font-semibold text-gray-700">
+                      <div className="p-3.5 bg-gray-50 rounded-full shadow-sm text-black"><Phone size={20} /></div>
+                      Call Us
+                    </motion.a>
+                    <motion.a whileTap={{ scale: 0.95 }} href="mailto:accounts@tanviimpex.com" className="flex flex-col items-center gap-2.5 text-sm font-semibold text-gray-700">
+                      <div className="p-3.5 bg-gray-50 rounded-full shadow-sm text-black"><Mail size={20} /></div>
+                      Email Us
+                    </motion.a>
+                  </div>
+                  <motion.a
+                    href="https://wa.me/918082111250"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    onClick={() => setIsOpen(false)}
+                    whileTap={{ scale: 0.98 }}
+                    className="w-full flex items-center justify-center gap-2 px-6 py-4.5 font-bold text-lg bg-gradient-to-r from-[#C28E3A] to-[#D4AF37] hover:from-[#b07f32] hover:to-[#bfa132] text-white rounded-2xl text-center shadow-[0_8px_20px_-6px_rgba(194,142,58,0.5)] transition-all"
+                  >
+                    Chat on WhatsApp
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </motion.a>
+                </motion.div>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </motion.header>

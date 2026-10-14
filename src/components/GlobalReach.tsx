@@ -26,7 +26,16 @@ export const GlobalReach: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         <div className="w-full overflow-hidden">
           <img
-            src="/Pan-India Premium Nut Supply Network.png"
+            src="/Pan-India Premium Nut Supply Network.webp"
+            loading="lazy"
+            decoding="async"
+            onError={(e) => {
+              const target = e.currentTarget;
+              if (!target.dataset.tried) {
+                target.dataset.tried = 'true';
+                target.src = '/Pan-India Premium Nut Supply Network.png';
+              }
+            }}
             alt="Wide Reach, Dedicated Care - Pan-India Premium Nut Supply Network across 23 states"
             className="w-full h-auto block"
           />
