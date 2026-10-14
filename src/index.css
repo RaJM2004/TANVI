@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-text-secondary antialiased overflow-x-hidden;
+    font-family: 'Inter', 'SF Pro Display', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-text-primary tracking-tight;
+  }
+
+  /* Restore cursor on mobile */
+  @media (hover: none) and (pointer: coarse) {
+    body {
+      cursor: auto;
+    }
+  }
+}
+
+@layer utilities {
+  .glass-nav {
+    @apply bg-background/80 backdrop-blur-md border-b border-text-primary/5;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* ── Keyframe Animations ── */
+
+@keyframes scan {
+  0% { left: -50%; }
+  100% { left: 150%; }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+@keyframes float-diamond {
+  0%, 100% {
+    transform: rotate(45deg) translateY(0px);
+    opacity: 0.3;
+  }
+  50% {
+    transform: rotate(45deg) translateY(-15px);
+    opacity: 0.6;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(194, 142, 58, 0);
+  }
+  50% {
+    box-shadow: 0 0 25px 5px rgba(194, 142, 58, 0.3);
+  }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ── Custom Animation Classes ── */
+
+.floating-diamond {
+  animation: float-diamond 3s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+/* ── Animated Underline for Links ── */
+
+.animated-underline {
+  position: relative;
+  text-decoration: none;
+}
+
+.animated-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #C28E3A;
+  transition: width 0.3s ease;
+}
+
+.animated-underline:hover::after {
+  width: 100%;
+}
+
+/* ── Smooth scroll behavior ── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ── Selection color ── */
+::selection {
+  background: rgba(194, 142, 58, 0.3);
+}
+
+/* ── Card Marquee Animation ── */
+@keyframes card-marquee-scroll {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-card-marquee {
+  display: flex;
+  width: max-content;
+  animation: card-marquee-scroll 18s linear infinite;
+  will-change: transform;
+}
+
+.animate-card-marquee:hover,
+.group:hover .animate-card-marquee {
+  animation-play-state: paused;
+}
+

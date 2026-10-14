@@ -1,0 +1,27 @@
+# robots.txt for Tanvi Impex
+User-agent: *
+Allow: /
+
+# Allow AI & Answer Engine bots for AEO / GEO
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+Sitemap: https://tanviimpex.com/sitemap.xml
