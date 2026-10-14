@@ -77,16 +77,16 @@ export const Navigation: React.FC = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
       className={`fixed top-0 w-full z-[1000] flex justify-center transition-all duration-700 px-4 sm:px-6 pointer-events-none ${
-        scrolled ? 'py-4' : 'py-6'
+        scrolled ? 'py-2.5 sm:py-4' : 'py-3.5 sm:py-6'
       }`}
     >
       <div 
         className={`w-full max-w-7xl flex items-center justify-between transition-all duration-700 pointer-events-auto rounded-[2rem] relative z-[1002] ${
           isOpen
-            ? 'bg-white shadow-[0_12px_36px_rgba(0,0,0,0.18)] border border-gray-200 px-6 py-3'
+            ? 'bg-white shadow-[0_12px_36px_rgba(0,0,0,0.18)] border border-gray-200 px-5 sm:px-6 py-2 sm:py-3'
             : scrolled 
-            ? 'bg-white/90 backdrop-blur-2xl shadow-[0_8px_32px_0_rgba(0,0,0,0.08)] border border-white/50 px-6 py-3' 
-            : 'bg-white/50 backdrop-blur-md shadow-sm border border-white/30 px-6 py-3'
+            ? 'bg-white/90 backdrop-blur-2xl shadow-[0_8px_32px_0_rgba(0,0,0,0.08)] border border-white/50 px-5 sm:px-6 py-2 sm:py-3' 
+            : 'bg-white/50 backdrop-blur-md shadow-sm border border-white/30 px-5 sm:px-6 py-2 sm:py-3'
         }`}
       >
         {/* Logo */}
@@ -249,7 +249,7 @@ export const Navigation: React.FC = () => {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -10, scale: 0.98 }}
               transition={{ type: "spring", bounce: 0, duration: 0.35 }}
-              className="absolute top-[116px] left-4 right-4 md:hidden pointer-events-auto bg-[#FAF7F2] rounded-3xl shadow-[0_25px_60px_-10px_rgba(0,0,0,0.5)] border border-[#C28E3A]/25 overflow-hidden max-h-[calc(100vh-140px)] overflow-y-auto z-[1001]"
+              className="absolute top-[92px] sm:top-[112px] left-4 right-4 md:hidden pointer-events-auto bg-[#FAF7F2] rounded-3xl shadow-[0_25px_60px_-10px_rgba(0,0,0,0.5)] border border-[#C28E3A]/25 overflow-hidden max-h-[calc(100vh-120px)] overflow-y-auto z-[1001]"
             >
               <div className="p-7 flex flex-col gap-1">
                 {navLinks.map((link, i) => {

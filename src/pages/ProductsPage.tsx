@@ -21,7 +21,7 @@ export const ProductsPage: React.FC = () => {
   const pageDescription = 'Explore Tanvi Impex wholesale dry fruits and nuts catalog. 15kg California Almond master boxes, 20kg Irani Pistachios, wholesale pumpkin, sunflower and chia seeds at APMC Navi Mumbai mandi rates.';
 
   return (
-    <div className="min-h-screen bg-background text-[#2D2318] pt-36 sm:pt-36 md:pt-40">
+    <div className="min-h-screen bg-background text-[#2D2318] pt-24 sm:pt-28">
       <SEO
         title={pageTitle}
         description={pageDescription}
@@ -29,9 +29,9 @@ export const ProductsPage: React.FC = () => {
       />
       
       {/* Top Breadcrumb & Page Banner */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-2">
         <h1 className="sr-only">Wholesale Dry Fruits, California Almonds, Irani Pistachios & Seeds Catalog</h1>
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 py-3 border-b border-black/10 text-xs sm:text-sm text-black/60">
+        <div className="flex flex-wrap items-center justify-between gap-3 sm:gap-4 py-2 border-b border-black/10 text-xs sm:text-sm text-black/60">
           <div className="flex items-center gap-2">
             <Link to="/" className="inline-flex items-center gap-1.5 hover:text-[#C28E3A] font-medium transition-colors">
               <ArrowLeft size={14} />
