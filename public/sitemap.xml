@@ -59,4 +59,16 @@
       <image:title>Superfood Seeds Bulk Wholesale Category</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://www.tanviimpex.com/privacy-policy</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.tanviimpex.com/terms-of-service</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>

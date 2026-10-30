@@ -2,6 +2,19 @@
   "buildCommand": "npm run build",
   "installCommand": "npm install",
   "framework": "vite",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "tanviimpex.com"
+        }
+      ],
+      "destination": "https://www.tanviimpex.com/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",

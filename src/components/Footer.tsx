@@ -330,20 +330,18 @@ export const Footer = () => {
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-white/40 text-sm">
           <p>&copy; 2019 - {new Date().getFullYear()} Tanvi Impex. All rights reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <button
-              type="button"
-              onClick={() => setPolicyModal('privacy')}
-              className="hover:text-white transition-colors animated-underline cursor-pointer bg-transparent border-0 text-white/50 text-sm p-0"
+            <Link
+              to="/privacy-policy"
+              className="hover:text-white transition-colors animated-underline text-white/50 text-sm"
             >
               Privacy Policy
-            </button>
-            <button
-              type="button"
-              onClick={() => setPolicyModal('terms')}
-              className="hover:text-white transition-colors animated-underline cursor-pointer bg-transparent border-0 text-white/50 text-sm p-0"
+            </Link>
+            <Link
+              to="/terms-of-service"
+              className="hover:text-white transition-colors animated-underline text-white/50 text-sm"
             >
               Terms of Service
-            </button>
+            </Link>
           </div>
         </div>
       </div>

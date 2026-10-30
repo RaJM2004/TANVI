@@ -95,7 +95,7 @@ export const ProductsPage: React.FC = () => {
               Wholesale Dry Fruits &amp; Seeds Packaging Specifications
             </h2>
             <p className="text-black/70 text-sm sm:text-base leading-relaxed">
-              Tanvi Impex supplies dry fruits, nuts, and edible seeds exclusively in sealed commercial master packaging ranging from 10kg master cartons up to 30kg bulk bags. Single consumer pieces are not sold. Consignments are warehouse-dispatched from APMC Market-1, Vashi under FSSAI License No. 11522998001006.
+              Tanvi Impex supplies dry fruits, nuts, and edible seeds exclusively in sealed commercial master packaging ranging from 15kg master cartons and bags up to 30kg bulk sacks. Single consumer pieces are not sold. Consignments are warehouse-dispatched from APMC Market-1, Vashi under FSSAI License No. 11522998001006.
             </p>
           </div>
 

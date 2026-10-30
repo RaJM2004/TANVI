@@ -73,7 +73,7 @@ const MapChart = () => {
         });
         
         setDeliveryPoints(computedPoints);
-      } catch (e) {
+      } catch {
         // keep polling
       }
     }, 50);
