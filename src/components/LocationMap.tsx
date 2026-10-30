@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { MapPin, Navigation, ExternalLink, Phone, Clock, Star } from 'lucide-react';
 
 export const LocationMap: React.FC = () => {
-  const googleMapsUrl = "https://maps.google.com/?q=H-33+APMC+Market-1+Phase-2+Sector-19+Vashi+Navi+Mumbai+400705";
-  const directionsUrl = "https://www.google.com/maps/dir/?api=1&destination=H-33+APMC+Market-1+Phase-2+Sector-19+Vashi+Navi+Mumbai+400705";
+  const googleMapsUrl = "https://www.google.com/maps/place/TANVI+IMPEX/@19.0749001,73.0068883,16z/data=!4m6!3m5!1s0x3be7c15075af2b81:0xcd69493888961ae2!8m2!3d19.0749001!4d73.0068883";
+  const directionsUrl = "https://www.google.com/maps/dir/?api=1&destination=TANVI+IMPEX+APMC+Market-1+Vashi+Navi+Mumbai&destination_place_id=ChIJgSuvdVDh5zsR4hqWiDhJad8";
 
   return (
     <section className="py-20 md:py-28 bg-[#FAF7F2] relative overflow-hidden" id="location">
@@ -53,8 +53,8 @@ export const LocationMap: React.FC = () => {
         >
           {/* Real Google Maps Embed Iframe */}
           <iframe
-            title="Tanvi Impex H-33 APMC Market-1 - Google Map"
-            src="https://maps.google.com/maps?q=H-33%20APMC%20Market-1%20Phase-2%20Sector-19,%20Vashi,%20Navi%20Mumbai%20400705&t=&z=16&ie=UTF8&iwloc=&output=embed"
+            title="Tanvi Impex TANVI IMPEX - Exact Google Maps Location"
+            src="https://maps.google.com/maps?q=19.0749001,73.0068883(TANVI%20IMPEX)&t=&z=16&ie=UTF8&iwloc=&output=embed"
             width="100%"
             height="100%"
             style={{ border: 0 }}
@@ -106,21 +106,28 @@ export const LocationMap: React.FC = () => {
                 H-33 APMC Market-1, Phase-2, Sector-19, Vashi, Navi Mumbai, Maharashtra 400705, India
               </p>
 
-              {/* Star Rating Badge */}
+              {/* Star Rating Badge (IndiaMART Verified) */}
               <div className="flex items-center gap-2 mb-4 pb-3 border-b border-black/5 text-xs">
-                <span className="font-bold text-black">5.0</span>
-                <div className="flex text-[#F4B400]">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={13} fill="#F4B400" />
+                <span className="font-bold text-black">4.3</span>
+                <div className="flex items-center gap-0.5 text-[#F4B400]">
+                  {[...Array(4)].map((_, i) => (
+                    <Star key={i} size={13} fill="#F4B400" className="text-[#F4B400]" />
                   ))}
+                  <div className="relative inline-block w-[13px] h-[13px]">
+                    <Star size={13} fill="rgba(0,0,0,0.12)" className="text-black/10" />
+                    <div className="absolute inset-0 overflow-hidden w-[30%]">
+                      <Star size={13} fill="#F4B400" className="text-[#F4B400]" />
+                    </div>
+                  </div>
                 </div>
                 <a
-                  href={googleMapsUrl}
+                  href="https://www.indiamart.com/tanviimpexnavimumbai/testimonial.html"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-black/60 hover:text-[#C28E3A] underline font-medium"
+                  className="text-black/70 hover:text-[#00A699] font-semibold flex items-center gap-1 transition-colors"
+                  title="Verify all ratings live on official IndiaMART testimonial page"
                 >
-                  (8 Google Reviews)
+                  <span>(75 IndiaMART Reviews)</span>
                 </a>
               </div>
 

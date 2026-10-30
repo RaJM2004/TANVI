@@ -14,7 +14,10 @@ import { Footer } from '../components/Footer';
 
 export const HomePage: React.FC = () => {
   return (
-    <main>
+    <main id="main-content">
+      <h1 className="sr-only">
+        Tanvi Impex | Wholesale California Almonds, Irani Pistachios &amp; Dry Fruits Importer Mumbai
+      </h1>
       <SEO
         title="Tanvi Impex | Wholesale California Almonds, Irani Pistachios & Dry Fruits Importer Mumbai"
         description="Premier importer, trader and bulk distributor of California Almonds, Nútböld Almonds, Irani & California Pistachios, Pumpkin, Sunflower & Chia Seeds in APMC Market, Navi Mumbai."

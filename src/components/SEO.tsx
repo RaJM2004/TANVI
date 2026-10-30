@@ -10,8 +10,8 @@ interface SEOProps {
 }
 
 export const SEO: React.FC<SEOProps> = ({
-  title = 'Tanvi Impex | Wholesale California Almonds, Irani Pistachios & Premium Seeds Importer Mumbai',
-  description = 'Leading importer, trader and bulk distributor of California Almonds, Nútböld Almonds, Irani & California Pistachios, Pumpkin Seeds, Sunflower Seeds & Chia Seeds based in APMC Market, Navi Mumbai.',
+  title = 'Tanvi Impex | Wholesale Almonds & Pistachios Importer Mumbai',
+  description = 'Wholesale importer & distributor of California Almonds, Irani Pistachios & seeds at APMC Market, Navi Mumbai. Direct port sourcing & pan-India bulk supply.',
   canonical,
   ogType = 'website',
   ogImage = 'https://www.tanviimpex.com/og-image.jpg',

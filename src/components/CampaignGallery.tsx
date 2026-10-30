@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 
 export const CampaignGallery: React.FC = () => {
   return (
-    <section className="w-full pt-2 sm:pt-4 md:pt-6 pb-12 sm:pb-16 bg-background">
+    <section className="w-full pt-2 sm:pt-4 md:pt-6 pb-12 sm:pb-16 bg-background" aria-label="Visual Campaigns">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <h2 className="sr-only">Featured Dry Fruits &amp; Seeds Wholesale Visual Campaigns</h2>
 
         {/* Top Banner: California Pistachio Premium Nature Banner */}
         <div className="w-full mb-6 sm:mb-8 md:mb-10">

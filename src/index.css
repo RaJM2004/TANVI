@@ -134,3 +134,35 @@ html {
   animation-play-state: paused;
 }
 
+/* ── 3-Column Vertical Moving Reviews Marquee ── */
+@keyframes marquee-vertical {
+  0% { transform: translateY(0%); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes marquee-vertical-reverse {
+  0% { transform: translateY(-50%); }
+  100% { transform: translateY(0%); }
+}
+
+.animate-marquee-vertical-1 {
+  animation: marquee-vertical 55s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-vertical-2 {
+  animation: marquee-vertical 70s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-vertical-3 {
+  animation: marquee-vertical 60s linear infinite;
+  will-change: transform;
+}
+
+.hover-pause:hover .animate-marquee-vertical-1,
+.hover-pause:hover .animate-marquee-vertical-2,
+.hover-pause:hover .animate-marquee-vertical-3 {
+  animation-play-state: paused;
+}
+

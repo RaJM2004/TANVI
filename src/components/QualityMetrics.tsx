@@ -24,6 +24,7 @@ export const QualityMetrics: React.FC = () => {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+        <h2 className="sr-only">The Tanvi Impex Quality Promise – 100% Pure, Export Grade Dry Fruits</h2>
         <div className="w-full overflow-hidden">
           <img
             src="/The Tanvi Impex Promise.webp"

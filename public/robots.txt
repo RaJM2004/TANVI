@@ -25,3 +25,7 @@ User-agent: Applebot
 Allow: /
 
 Sitemap: https://www.tanviimpex.com/sitemap.xml
+
+# AI & Answer Engine Knowledge Directory
+# LLMs: https://www.tanviimpex.com/llms.txt
+# LLMs-Full: https://www.tanviimpex.com/llms-full.txt

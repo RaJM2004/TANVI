@@ -72,14 +72,21 @@ export const Navigation: React.FC = () => {
   };
 
   return (
-    <motion.header
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      className={`fixed top-0 w-full z-[1000] flex justify-center transition-all duration-700 px-4 sm:px-6 pointer-events-none ${
-        scrolled ? 'py-2.5 sm:py-4' : 'py-3.5 sm:py-6'
-      }`}
-    >
+    <>
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[99999] focus:px-5 focus:py-2.5 focus:bg-[#C28E3A] focus:text-white focus:font-bold focus:rounded-xl focus:shadow-2xl focus:outline-none pointer-events-auto transition-transform"
+      >
+        Skip to main content
+      </a>
+      <motion.header
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        className={`fixed top-0 w-full z-[1000] flex justify-center transition-all duration-700 px-4 sm:px-6 pointer-events-none ${
+          scrolled ? 'py-2.5 sm:py-4' : 'py-3.5 sm:py-6'
+        }`}
+      >
       <div 
         className={`w-full max-w-7xl flex items-center justify-between transition-all duration-700 pointer-events-auto rounded-[2rem] relative z-[1002] ${
           isOpen
@@ -309,5 +316,6 @@ export const Navigation: React.FC = () => {
         )}
       </AnimatePresence>
     </motion.header>
+    </>
   );
 };

@@ -84,8 +84,140 @@ export const ProductsPage: React.FC = () => {
       {/* Main Catalog View with Segregation and All Products */}
       <FeaturedProducts />
 
+      {/* Verified B2B Wholesale Specifications & Comparison Table (AEO / Search Engine Citations) */}
+      <section className="py-16 md:py-20 bg-white border-t border-black/5" id="specifications" aria-labelledby="specs-heading">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="max-w-3xl mb-8">
+            <span className="text-xs uppercase tracking-widest text-[#C28E3A] font-bold block mb-2">
+              Verified Mandi Supply Standards
+            </span>
+            <h2 id="specs-heading" className="text-3xl sm:text-4xl font-serif font-bold text-[#2D2318] mb-4">
+              Wholesale Dry Fruits &amp; Seeds Packaging Specifications
+            </h2>
+            <p className="text-black/70 text-sm sm:text-base leading-relaxed">
+              Tanvi Impex supplies dry fruits, nuts, and edible seeds exclusively in sealed commercial master packaging ranging from 10kg master cartons up to 30kg bulk bags. Single consumer pieces are not sold. Consignments are warehouse-dispatched from APMC Market-1, Vashi under FSSAI License No. 11522998001006.
+            </p>
+          </div>
+
+          {/* Responsive Specification Table */}
+          <div className="overflow-x-auto rounded-2xl border border-black/10 shadow-sm bg-[#FAF8F5]">
+            <table className="w-full text-left border-collapse text-xs sm:text-sm">
+              <caption className="sr-only">Tanvi Impex Wholesale Product Specifications and Packaging Breakdown</caption>
+              <thead>
+                <tr className="bg-[#1A110A] text-white border-b border-black/10">
+                  <th scope="col" className="py-4 px-4 sm:px-6 font-semibold">Product Line</th>
+                  <th scope="col" className="py-4 px-4 sm:px-6 font-semibold">Category</th>
+                  <th scope="col" className="py-4 px-4 sm:px-6 font-semibold">Origin</th>
+                  <th scope="col" className="py-4 px-4 sm:px-6 font-semibold">Master Pack Weight</th>
+                  <th scope="col" className="py-4 px-4 sm:px-6 font-semibold">Pack Breakdown</th>
+                  <th scope="col" className="py-4 px-4 sm:px-6 font-semibold">Minimum Supply Unit</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-black/5 text-[#2D2318]">
+                <tr className="hover:bg-black/[0.02] transition-colors">
+                  <th scope="row" className="py-3.5 px-4 sm:px-6 font-bold text-[#1A110A]">California Super Premium Almond</th>
+                  <td className="py-3.5 px-4 sm:px-6">Almonds</td>
+                  <td className="py-3.5 px-4 sm:px-6">California, USA</td>
+                  <td className="py-3.5 px-4 sm:px-6 font-mono font-bold text-[#C28E3A]">15kg</td>
+                  <td className="py-3.5 px-4 sm:px-6">15kg Master Bag</td>
+                  <td className="py-3.5 px-4 sm:px-6 font-medium">Full Master Bag Only</td>
+                </tr>
+                <tr className="hover:bg-black/[0.02] transition-colors bg-white/60">
+                  <th scope="row" className="py-3.5 px-4 sm:px-6 font-bold text-[#1A110A]">California Special BrainNut Almond</th>
+                  <td className="py-3.5 px-4 sm:px-6">Almonds</td>
+                  <td className="py-3.5 px-4 sm:px-6">California, USA</td>
+                  <td className="py-3.5 px-4 sm:px-6 font-mono font-bold text-[#C28E3A]">15kg</td>
+                  <td className="py-3.5 px-4 sm:px-6">15kg Master Bag</td>
+                  <td className="py-3.5 px-4 sm:px-6 font-medium">Full Master Bag Only</td>
+                </tr>
+                <tr className="hover:bg-black/[0.02] transition-colors">
+                  <th scope="row" className="py-3.5 px-4 sm:px-6 font-bold text-[#1A110A]">Special Almond Premium (Nútböld)</th>
+                  <td className="py-3.5 px-4 sm:px-6">Almonds</td>
+                  <td className="py-3.5 px-4 sm:px-6">California, USA</td>
+                  <td className="py-3.5 px-4 sm:px-6 font-mono font-bold text-[#C28E3A]">15kg</td>
+                  <td className="py-3.5 px-4 sm:px-6">15kg Master Box</td>
+                  <td className="py-3.5 px-4 sm:px-6 font-medium">Full Master Box Only</td>
+                </tr>
+                <tr className="hover:bg-black/[0.02] transition-colors bg-white/60">
+                  <th scope="row" className="py-3.5 px-4 sm:px-6 font-bold text-[#1A110A]">Super Special Almonds (Triple Pack)</th>
+                  <td className="py-3.5 px-4 sm:px-6">Almonds</td>
+                  <td className="py-3.5 px-4 sm:px-6">California, USA</td>
+                  <td className="py-3.5 px-4 sm:px-6 font-mono font-bold text-[#C28E3A]">15kg</td>
+                  <td className="py-3.5 px-4 sm:px-6">5kg × 3 Packs</td>
+                  <td className="py-3.5 px-4 sm:px-6 font-medium">Full Master Carton (15kg)</td>
+                </tr>
+                <tr className="hover:bg-black/[0.02] transition-colors">
+                  <th scope="row" className="py-3.5 px-4 sm:px-6 font-bold text-[#1A110A]">Independent Regular Almonds</th>
+                  <td className="py-3.5 px-4 sm:px-6">Almonds</td>
+                  <td className="py-3.5 px-4 sm:px-6">California, USA</td>
+                  <td className="py-3.5 px-4 sm:px-6 font-mono font-bold text-[#C28E3A]">30kg</td>
+                  <td className="py-3.5 px-4 sm:px-6">30kg Bulk Bag</td>
+                  <td className="py-3.5 px-4 sm:px-6 font-medium">Full Bulk Bag Only</td>
+                </tr>
+                <tr className="hover:bg-black/[0.02] transition-colors bg-white/60">
+                  <th scope="row" className="py-3.5 px-4 sm:px-6 font-bold text-[#1A110A]">Irani Roasted &amp; Salted Pistachio</th>
+                  <td className="py-3.5 px-4 sm:px-6">Pistachios</td>
+                  <td className="py-3.5 px-4 sm:px-6">Iran</td>
+                  <td className="py-3.5 px-4 sm:px-6 font-mono font-bold text-[#C28E3A]">20kg</td>
+                  <td className="py-3.5 px-4 sm:px-6">1kg × 20 Pouches</td>
+                  <td className="py-3.5 px-4 sm:px-6 font-medium">Full Master Carton (20kg)</td>
+                </tr>
+                <tr className="hover:bg-black/[0.02] transition-colors">
+                  <th scope="row" className="py-3.5 px-4 sm:px-6 font-bold text-[#1A110A]">California Roasted &amp; Salted Pistachio</th>
+                  <td className="py-3.5 px-4 sm:px-6">Pistachios</td>
+                  <td className="py-3.5 px-4 sm:px-6">California, USA</td>
+                  <td className="py-3.5 px-4 sm:px-6 font-mono font-bold text-[#C28E3A]">20kg</td>
+                  <td className="py-3.5 px-4 sm:px-6">1kg × 20 Pouches</td>
+                  <td className="py-3.5 px-4 sm:px-6 font-medium">Full Master Carton (20kg)</td>
+                </tr>
+                <tr className="hover:bg-black/[0.02] transition-colors bg-white/60">
+                  <th scope="row" className="py-3.5 px-4 sm:px-6 font-bold text-[#1A110A]">California Pistachio Stand-Up Pouch</th>
+                  <td className="py-3.5 px-4 sm:px-6">Pistachios</td>
+                  <td className="py-3.5 px-4 sm:px-6">California, USA</td>
+                  <td className="py-3.5 px-4 sm:px-6 font-mono font-bold text-[#C28E3A]">10kg</td>
+                  <td className="py-3.5 px-4 sm:px-6">250g × 40 Pouches</td>
+                  <td className="py-3.5 px-4 sm:px-6 font-medium">Full Master Carton (10kg)</td>
+                </tr>
+                <tr className="hover:bg-black/[0.02] transition-colors">
+                  <th scope="row" className="py-3.5 px-4 sm:px-6 font-bold text-[#1A110A]">Irani Pistachio Stand-Up Pouch</th>
+                  <td className="py-3.5 px-4 sm:px-6">Pistachios</td>
+                  <td className="py-3.5 px-4 sm:px-6">Iran</td>
+                  <td className="py-3.5 px-4 sm:px-6 font-mono font-bold text-[#C28E3A]">10kg</td>
+                  <td className="py-3.5 px-4 sm:px-6">250g × 40 Pouches</td>
+                  <td className="py-3.5 px-4 sm:px-6 font-medium">Full Master Carton (10kg)</td>
+                </tr>
+                <tr className="hover:bg-black/[0.02] transition-colors bg-white/60">
+                  <th scope="row" className="py-3.5 px-4 sm:px-6 font-bold text-[#1A110A]">Grade AAA Pumpkin Seeds</th>
+                  <td className="py-3.5 px-4 sm:px-6">Seeds</td>
+                  <td className="py-3.5 px-4 sm:px-6">Certified Farms</td>
+                  <td className="py-3.5 px-4 sm:px-6 font-mono font-bold text-[#C28E3A]">12.5kg</td>
+                  <td className="py-3.5 px-4 sm:px-6">12.5kg Bulk Master Pack</td>
+                  <td className="py-3.5 px-4 sm:px-6 font-medium">Full Master Pack Only</td>
+                </tr>
+                <tr className="hover:bg-black/[0.02] transition-colors">
+                  <th scope="row" className="py-3.5 px-4 sm:px-6 font-bold text-[#1A110A]">Grade AAA Sunflower Seeds</th>
+                  <td className="py-3.5 px-4 sm:px-6">Seeds</td>
+                  <td className="py-3.5 px-4 sm:px-6">Certified Farms</td>
+                  <td className="py-3.5 px-4 sm:px-6 font-mono font-bold text-[#C28E3A]">12.5kg</td>
+                  <td className="py-3.5 px-4 sm:px-6">12.5kg Bulk Master Pack</td>
+                  <td className="py-3.5 px-4 sm:px-6 font-medium">Full Master Pack Only</td>
+                </tr>
+                <tr className="hover:bg-black/[0.02] transition-colors bg-white/60">
+                  <th scope="row" className="py-3.5 px-4 sm:px-6 font-bold text-[#1A110A]">Premium Chia Seeds</th>
+                  <td className="py-3.5 px-4 sm:px-6">Seeds</td>
+                  <td className="py-3.5 px-4 sm:px-6">Certified Import</td>
+                  <td className="py-3.5 px-4 sm:px-6 font-mono font-bold text-[#C28E3A]">25kg</td>
+                  <td className="py-3.5 px-4 sm:px-6">25kg Bulk Master Bag</td>
+                  <td className="py-3.5 px-4 sm:px-6 font-medium">Full Master Bag Only</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
       {/* Bulk & Wholesale Inquiries Section */}
-      <section className="py-16 md:py-24 bg-[#FAF7F2] relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-[#FAF7F2] relative overflow-hidden" aria-labelledby="bulk-inquiries-heading">
         {/* Subtle decorative background aura */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#C28E3A]/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -105,9 +237,9 @@ export const ProductsPage: React.FC = () => {
                   Direct Importer & Wholesale Desk
                 </div>
 
-                <h3 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white mb-5 leading-[1.15]">
+                <h2 id="bulk-inquiries-heading" className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white mb-5 leading-[1.15]">
                   Looking for <span className="text-[#E5C158]">15kg Bulk Boxes</span> or Custom Packing?
-                </h3>
+                </h2>
 
                 <p className="text-white/75 text-base sm:text-lg leading-relaxed mb-8 max-w-xl">
                   Headquartered at APMC Market-1, Vashi, Tanvi Impex supplies 15kg master cartons, 20kg wholesale cases, bulk sacks up to 30kg, and custom commercial packaging to wholesalers, sweet manufacturers, and retail chains across 23 states.

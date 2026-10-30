@@ -1,6 +1,6 @@
 
 import { useRef, useEffect, useState } from 'react';
-import { MapPin, Phone, Mail, CheckCircle, Store, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
+import { MapPin, Phone, Mail, CheckCircle, Store, CheckCircle2, AlertCircle, Loader2, X, ShieldCheck, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -14,6 +14,7 @@ export const Footer = () => {
   const [newsletterEmail, setNewsletterEmail] = useState('');
   const [newsletterStatus, setNewsletterStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [newsletterMessage, setNewsletterMessage] = useState('');
+  const [policyModal, setPolicyModal] = useState<'privacy' | 'terms' | null>(null);
 
   const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -264,9 +265,15 @@ export const Footer = () => {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleNewsletterSubmit} className="space-y-2">
+              <form onSubmit={handleNewsletterSubmit} className="space-y-2" name="newsletter_form" id="footer-newsletter-form">
+                <label htmlFor="footer-newsletter-email" className="sr-only">
+                  Email Address for Wholesale Updates
+                </label>
                 <div className="flex">
                   <input
+                    id="footer-newsletter-email"
+                    name="email"
+                    autoComplete="email"
                     type="email"
                     required
                     value={newsletterEmail}
@@ -280,6 +287,7 @@ export const Footer = () => {
                   />
                   <button
                     type="submit"
+                    aria-label="Subscribe to Tanvi Impex wholesale newsletter"
                     disabled={newsletterStatus === 'loading'}
                     className="subscribe-btn bg-[#C28E3A] text-white px-5 py-3 rounded-r-lg font-bold tracking-widest uppercase text-xs hover:bg-white hover:text-black transition-colors relative overflow-hidden group shrink-0 flex items-center justify-center min-w-[100px] disabled:opacity-75"
                   >
@@ -322,11 +330,111 @@ export const Footer = () => {
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-white/40 text-sm">
           <p>&copy; 2019 - {new Date().getFullYear()} Tanvi Impex. All rights reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white transition-colors animated-underline">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors animated-underline">Terms of Service</a>
+            <button
+              type="button"
+              onClick={() => setPolicyModal('privacy')}
+              className="hover:text-white transition-colors animated-underline cursor-pointer bg-transparent border-0 text-white/50 text-sm p-0"
+            >
+              Privacy Policy
+            </button>
+            <button
+              type="button"
+              onClick={() => setPolicyModal('terms')}
+              className="hover:text-white transition-colors animated-underline cursor-pointer bg-transparent border-0 text-white/50 text-sm p-0"
+            >
+              Terms of Service
+            </button>
           </div>
         </div>
       </div>
+
+      {/* Accessible Policy & Terms Modals */}
+      {policyModal && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="policy-dialog-title"
+          className="fixed inset-0 z-[999999] flex items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-md"
+        >
+          <div
+            className="relative w-full max-w-2xl bg-[#1A110A] text-white border border-[#C28E3A]/40 rounded-3xl p-6 sm:p-8 max-h-[85vh] overflow-y-auto shadow-2xl space-y-4"
+          >
+            <div className="flex items-center justify-between border-b border-white/10 pb-4">
+              <div className="flex items-center gap-3">
+                {policyModal === 'privacy' ? (
+                  <ShieldCheck className="w-6 h-6 text-[#C28E3A]" />
+                ) : (
+                  <FileText className="w-6 h-6 text-[#C28E3A]" />
+                )}
+                <h3 id="policy-dialog-title" className="text-xl sm:text-2xl font-serif font-bold text-white">
+                  {policyModal === 'privacy' ? 'Privacy Policy' : 'Terms of Wholesale Service'}
+                </h3>
+              </div>
+              <button
+                type="button"
+                onClick={() => setPolicyModal(null)}
+                aria-label="Close modal dialog"
+                className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="text-xs sm:text-sm text-white/80 leading-relaxed space-y-3 pt-2">
+              {policyModal === 'privacy' ? (
+                <>
+                  <p>
+                    <strong>Tanvi Impex</strong> (Ground Floor, H-33, APMC Market-1, Sector-19, Phase-2, Vashi, Navi Mumbai, Thane, Maharashtra 400703; GSTIN: 27AAPFT0162R1ZG; FSSAI: 11522998001006) respects the confidentiality and data integrity of all wholesale commercial partners, mandi traders, and business clients.
+                  </p>
+                  <p>
+                    <strong>1. Information Collection:</strong> We collect business contact information (buyer name, company name, phone/WhatsApp number, delivery city/state, and email address) submitted voluntarily through our quote forms, WhatsApp desks, or email communications.
+                  </p>
+                  <p>
+                    <strong>2. Purpose of Use:</strong> Information is used exclusively to generate wholesale quotation estimates, verify mandi dispatch locations, issue statutory tax invoices, and communicate shipment logistics.
+                  </p>
+                  <p>
+                    <strong>3. Data Protection:</strong> We do not sell, rent, trade, or distribute buyer information to unauthorized third parties. Information is processed strictly for commercial order fulfillment and legal regulatory compliance under Indian law.
+                  </p>
+                  <p>
+                    <strong>4. Contact:</strong> For any privacy-related inquiries, please contact our administrative desk at <a href="mailto:accounts@tanviimpex.com" className="text-[#C28E3A] underline">accounts@tanviimpex.com</a> or phone 022 49608280.
+                  </p>
+                </>
+              ) : (
+                <>
+                  <p>
+                    <strong>Tanvi Impex</strong> operates as a wholesale importer and mandi distributor. By requesting quotes or ordering commercial consignments, clients agree to the following terms:
+                  </p>
+                  <p>
+                    <strong>1. Wholesale Scope &amp; Minimum Order:</strong> All products are sold strictly for commercial wholesale use. Minimum order quantities start from 15kg. Products are supplied exclusively in original sealed master cartons, boxes, and bulk sacks (e.g. 15kg, 20kg, 25kg, 30kg). Single retail consumer units are not sold.
+                  </p>
+                  <p>
+                    <strong>2. Mandi Pricing &amp; GST:</strong> Quotations reflect real-time APMC Vashi mandi wholesale rates and are exclusive of statutory GST. Statutory Goods and Services Tax (5% or 12%) is itemized on all official tax invoices.
+                  </p>
+                  <p>
+                    <strong>3. Sourcing &amp; Quality:</strong> Dry fruits are directly imported from certified orchards in California (USA) and Iran through JNPT (Nhava Sheva). Lots are stored and inspected under FSSAI License No. 11522998001006.
+                  </p>
+                  <p>
+                    <strong>4. Dispatch &amp; Inspection:</strong> Consignments are dispatched across 23 Indian states. Buyers must inspect shipments upon arrival. Any transit issues must be notified with photo evidence within 24 hours of delivery.
+                  </p>
+                  <p>
+                    <strong>5. Jurisdiction:</strong> Commercial transactions are governed under the legal jurisdiction of courts in Thane / Navi Mumbai, Maharashtra, India.
+                  </p>
+                </>
+              )}
+            </div>
+
+            <div className="pt-4 border-t border-white/10 flex justify-end">
+              <button
+                type="button"
+                onClick={() => setPolicyModal(null)}
+                className="px-6 py-2.5 rounded-xl bg-[#C28E3A] hover:bg-[#a8782e] text-white font-bold text-xs uppercase tracking-wider transition-colors"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </footer>
   );
 };

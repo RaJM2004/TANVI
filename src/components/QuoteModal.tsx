@@ -137,7 +137,7 @@ export const QuoteModal = ({ product, onClose }: QuoteModalProps) => {
           </div>
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="p-6 sm:p-8 space-y-4">
+          <form onSubmit={handleSubmit} className="p-6 sm:p-8 space-y-4" name="wholesale_quote_form" id="wholesale-quote-form">
             {/* Wholesale Packaging Specification Banner */}
             <div className="p-3.5 rounded-2xl bg-gradient-to-r from-[#C28E3A]/15 to-[#0F5A3B]/15 border border-[#C28E3A]/30 text-xs">
               <div className="flex items-center justify-between gap-2 mb-1">
@@ -161,16 +161,19 @@ export const QuoteModal = ({ product, onClose }: QuoteModalProps) => {
               )}
               <div className="mt-2 pt-2 border-t border-white/10 flex items-center gap-1.5 text-[11px] text-[#F3B770] font-medium">
                 <AlertCircle className="w-3.5 h-3.5 shrink-0 text-[#F3B770]" />
-                <span>Wholesale Only: Sold in Full Master Packs • Not Sold in Single Pieces</span>
+                <span>Wholesale Only: Minimum Order Starts from 15kg • Sold in Full Master Packs</span>
               </div>
             </div>
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-[#C28E3A] mb-1.5">
+              <label htmlFor="quote-buyer-name" className="block text-xs font-bold uppercase tracking-wider text-[#C28E3A] mb-1.5">
                 Your Name / Business Name *
               </label>
               <div className="relative">
-                <User className="w-4 h-4 text-white/40 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                <User className="w-4 h-4 text-white/40 absolute left-3.5 top-1/2 -translate-y-1/2" aria-hidden="true" />
                 <input
+                  id="quote-buyer-name"
+                  name="buyer_name"
+                  autoComplete="name"
                   type="text"
                   required
                   placeholder="e.g. Ramesh Patel / ABC Enterprises"
@@ -182,12 +185,15 @@ export const QuoteModal = ({ product, onClose }: QuoteModalProps) => {
             </div>
 
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-[#C28E3A] mb-1.5">
+              <label htmlFor="quote-buyer-phone" className="block text-xs font-bold uppercase tracking-wider text-[#C28E3A] mb-1.5">
                 WhatsApp / Phone Number *
               </label>
               <div className="relative">
-                <Phone className="w-4 h-4 text-white/40 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                <Phone className="w-4 h-4 text-white/40 absolute left-3.5 top-1/2 -translate-y-1/2" aria-hidden="true" />
                 <input
+                  id="quote-buyer-phone"
+                  name="buyer_phone"
+                  autoComplete="tel"
                   type="tel"
                   required
                   placeholder="e.g. +91 98765 43210"
@@ -199,12 +205,15 @@ export const QuoteModal = ({ product, onClose }: QuoteModalProps) => {
             </div>
 
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-[#C28E3A] mb-1.5">
+              <label htmlFor="quote-buyer-location" className="block text-xs font-bold uppercase tracking-wider text-[#C28E3A] mb-1.5">
                 Delivery Location (City / State)
               </label>
               <div className="relative">
-                <MapPin className="w-4 h-4 text-white/40 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                <MapPin className="w-4 h-4 text-white/40 absolute left-3.5 top-1/2 -translate-y-1/2" aria-hidden="true" />
                 <input
+                  id="quote-buyer-location"
+                  name="delivery_location"
+                  autoComplete="address-level2"
                   type="text"
                   placeholder="e.g. Mumbai, Maharashtra"
                   value={location}
@@ -215,12 +224,14 @@ export const QuoteModal = ({ product, onClose }: QuoteModalProps) => {
             </div>
 
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-[#C28E3A] mb-1.5">
+              <label htmlFor="quote-buyer-message" className="block text-xs font-bold uppercase tracking-wider text-[#C28E3A] mb-1.5">
                 Special Requirement / Notes (Optional)
               </label>
               <div className="relative">
-                <MessageSquare className="w-4 h-4 text-white/40 absolute left-3.5 top-3.5" />
+                <MessageSquare className="w-4 h-4 text-white/40 absolute left-3.5 top-3.5" aria-hidden="true" />
                 <textarea
+                  id="quote-buyer-message"
+                  name="special_requirements"
                   rows={2}
                   placeholder="Any packaging or delivery timeline instructions..."
                   value={message}

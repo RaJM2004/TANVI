@@ -24,7 +24,7 @@ const categories = [
   {
     id: 'seeds',
     name: 'Seeds',
-    image: '/category-seeds.png',
+    image: '/category-seeds.webp',
     path: '/products?category=seeds',
   },
 ];
@@ -33,8 +33,9 @@ export const HomeCategoryBar = () => {
   const [activeHoverId, setActiveHoverId] = useState<string>('all');
 
   return (
-    <section className="pt-10 sm:pt-12 md:pt-14 pb-2 md:pb-3 bg-background text-center relative z-10">
+    <section className="pt-10 sm:pt-12 md:pt-14 pb-2 md:pb-3 bg-background text-center relative z-10" aria-label="Product Categories">
       <div className="max-w-7xl mx-auto px-4">
+        <h2 className="sr-only">Wholesale Categories: California Almonds, Irani Pistachios &amp; Superfood Seeds</h2>
         {/* Exact Circular Category Segregation Row */}
         <div
           className="flex items-center justify-start md:justify-center gap-7 sm:gap-10 md:gap-14 lg:gap-20 overflow-x-auto md:overflow-visible pt-8 sm:pt-10 pb-2 px-6 no-scrollbar"
@@ -61,7 +62,11 @@ export const HomeCategoryBar = () => {
                 >
                   <img
                     src={cat.image}
-                    alt={cat.name}
+                    alt={`${cat.name} Wholesale Category - Tanvi Impex`}
+                    width="192"
+                    height="192"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
                   />
 

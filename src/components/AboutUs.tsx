@@ -150,7 +150,7 @@ export const AboutUs = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.25 }}
                 >
-                  Headquartered at <span className="text-white font-medium">Ground Floor, H-33, APMC Market-1, Sector-19, Phase-2, Vashi, Navi Mumbai</span>, we operate direct container consignments from certified growers in California and Iran, providing transparent APMC mandi wholesale rates and reliable cold-chain supply across 23 Indian states. Verified by FSSAI and IndiaMART TrustSEAL with a proven 4.4★ rating.
+                  Headquartered at <span className="text-white font-medium">Ground Floor, H-33, APMC Market-1, Sector-19, Phase-2, Vashi, Navi Mumbai</span>, we operate direct container consignments from certified growers in California and Iran, providing transparent APMC mandi wholesale rates and reliable cold-chain supply across 23 Indian states. Verified by FSSAI and IndiaMART TrustSEAL with a proven 4.3★ rating across 69 verified ratings.
                 </motion.p>
               </div>
             

@@ -1,0 +1,62 @@
+# Tanvi Impex — Complete Enterprise Knowledge Base (llms-full.txt)
+
+## 1. Identity & Corporate Registrations
+- **Company Name:** Tanvi Impex
+- **Trade Description:** Direct Importer, Wholesaler, and Bulk Mandi Distributor of Edible Nuts, California Almonds, Irani Pistachios, and Natural Superfood Seeds
+- **Year of Establishment:** 2019
+- **Chief Executive Officer (CEO):** Bhushan Gajra
+- **Operational Headquarters & Warehouse:** Ground Floor, H-33, APMC Market-1, Sector-19, Phase-2, Vashi, Navi Mumbai, Thane, Maharashtra 400703, India
+- **Geographic Coordinates:** Latitude 19.0749001° N, Longitude 73.0068883° E (Google Maps CID: 0xcd69493888961ae2)
+- **Verified Google Maps URL:** [https://www.google.com/maps/place/TANVI+IMPEX/@19.0749001,73.0068883,16z](https://www.google.com/maps/place/TANVI+IMPEX/@19.0749001,73.0068883,16z)
+- **GSTIN Registration:** 27AAPFT0162R1ZG
+- **FSSAI Food Safety License No.:** 11522998001006
+- **Legal Entity Identifier (LEI):** 335800VW64XCC6IOKK11
+- **TrustSEAL Certification:** IndiaMART Verified (4.3★ aggregate rating across 69+ verified commercial buyer ratings)
+- **Primary Business Classification:** B2B Wholesale Mandi Trader & Importer (NIC Code 4630 / Wholesale of agricultural raw materials and food products)
+
+## 2. Direct Sourcing & SCM Architecture
+- **Port of Entry:** Jawaharlal Nehru Port Trust (JNPT / Nhava Sheva), Navi Mumbai
+- **Origin Partners:**
+  - California Almonds: Directly container-imported from certified orchard growers in the Central Valley, California, USA.
+  - Irani Pistachios: Direct orchard consignments imported from Iran.
+  - Edible Superfood Seeds: Grade AAA certified farms.
+- **Logistics & Distribution Hub:** APMC Market-1, Vashi, Navi Mumbai (Asia's premier agricultural trading exchange).
+- **Delivery Coverage:** 23 states across India with cold-chain preservation and scheduled transport dispatch within 24 to 48 hours of order confirmation.
+
+## 3. Product Catalog Specifications & Packaging Standards
+Minimum order quantity starts from 15kg. All products are supplied exclusively in wholesale commercial packaging. Retail single units are strictly not sold.
+
+| Product Title | Category | Country of Origin | Master Unit Weight | Inner Packaging Breakdown | Wholesale Supply Condition |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| California Super Premium Almond | Almonds | California, USA | 15 kg | 15 kg Master Bag | Full Master Bag Only |
+| California Special BrainNut Almond | Almonds | California, USA | 15 kg | 15 kg Master Bag | Full Master Bag Only |
+| Special Almond Premium (Nútböld) | Almonds | California, USA | 15 kg | 15 kg Master Box | Full Master Box Only |
+| Super Special Almonds | Almonds | California, USA | 15 kg | 5 kg × 3 Packs | Full Master Carton (15kg) |
+| Independent Jumbo Almond | Almonds | California, USA | 15 kg | 15 kg Master Bag | Full Master Bag Only |
+| Independent Regular Almonds | Almonds | California, USA | 30 kg | 30 kg Bulk Bag | Full Bulk Bag Only |
+| Irani Roasted & Salted Pistachio | Pistachios | Iran | 20 kg | 1 kg × 20 Pouches | Full Master Carton (20kg) |
+| California Roasted & Salted Pistachio | Pistachios | California, USA | 20 kg | 1 kg × 20 Pouches | Full Master Carton (20kg) |
+| California Pistachio Stand-Up Pouch | Pistachios | California, USA | 10 kg | 250 g × 40 Pouches | Full Master Carton (10kg) |
+| Irani Pistachio Stand-Up Pouch | Pistachios | Iran | 10 kg | 250 g × 40 Pouches | Full Master Carton (10kg) |
+| Grade AAA Pumpkin Seeds | Seeds | Certified Farms | 12.5 kg | 12.5 kg Master Pack | Full Master Pack Only |
+| Grade AAA Sunflower Seeds | Seeds | Certified Farms | 12.5 kg | 12.5 kg Master Pack | Full Master Pack Only |
+| Premium Chia Seeds | Seeds | Certified Import | 25 kg | 25 kg Bulk Master Bag | Full Master Bag Only |
+
+## 4. Wholesale Ordering Process & Verification
+1. **Catalog Exploration:** Buyers view live master packaging specifications at https://www.tanviimpex.com/products.
+2. **Quotation Request:** Buyers submit quantity and delivery location requirements via:
+   - WhatsApp Commercial Desk: +91 8082111250 (fastest response)
+   - APMC Mandi Office Phone: 022 49608280 / +91 8043810363
+   - Official Email: accounts@tanviimpex.com
+   - Verified IndiaMART Store: https://www.indiamart.com/tanviimpexnavimumbai/
+3. **Mandi Pricing & Invoicing:** Real-time APMC wholesale rates are quoted exclusive of statutory GST (5% or 12% itemized on tax invoice). Commercial sample testing is available upon request for verified trade buyers.
+4. **Dispatch:** Consignments are packed and dispatched via trusted transport partners with complete transit documentation and e-way bills.
+
+## 5. Contact & Compliance Directory
+- **Registered Desk:** Ground Floor, H-33, APMC Market-1, Sector-19, Phase-2, Vashi, Navi Mumbai 400703
+- **Primary Sales WhatsApp:** +91 8082111250
+- **Mandi Desk Phone:** 022 49608280
+- **Accounts & Billing:** accounts@tanviimpex.com
+- **FSSAI License:** 11522998001006
+- **GSTIN:** 27AAPFT0162R1ZG
+- **LEI:** 335800VW64XCC6IOKK11

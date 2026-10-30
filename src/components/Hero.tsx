@@ -193,20 +193,20 @@ export const Hero: React.FC = () => {
                     : 'text-left w-[65%] md:max-w-xl'
                 }`}
               >
-                <p className={`text-[#C28E3A] font-bold tracking-[0.1em] md:tracking-[0.2em] uppercase text-[10px] ${slides[current].minimalText ? 'md:text-lg mb-2' : 'md:text-sm mb-1 md:mb-4'}`}>
-                  {slides[current].subtitle}
-                </p>
-                
-                <h1 className={`font-serif text-[#2D2318] leading-[1.1] ${slides[current].minimalText ? 'text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-1' : 'text-4xl sm:text-5xl md:text-7xl lg:text-8xl mb-1 md:mb-4'}`}>
+                <div
+                  role="heading"
+                  aria-level={2}
+                  className={`font-serif text-[#2D2318] leading-[1.1] ${slides[current].minimalText ? 'text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-1' : 'text-4xl sm:text-5xl md:text-7xl lg:text-8xl mb-1 md:mb-4'}`}
+                >
                   <AnimatedTitle text={slides[current].title} className="" />
                   {' '}
                   {slides[current].minimalText && <span className="text-[#5C4D3C] font-medium text-2xl sm:text-3xl md:text-4xl lg:text-5xl ml-2">{slides[current].highlight}</span>}
-                </h1>
+                </div>
                 
                 {!slides[current].minimalText && (
-                  <h2 className="text-xl sm:text-2xl md:text-4xl text-[#5C4D3C] font-medium mb-2 md:mb-6 leading-tight">
+                  <p className="text-xl sm:text-2xl md:text-4xl text-[#5C4D3C] font-medium mb-2 md:mb-6 leading-tight font-serif">
                     {slides[current].highlight}
-                  </h2>
+                  </p>
                 )}
                 
                 {!slides[current].minimalText && (

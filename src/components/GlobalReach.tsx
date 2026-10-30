@@ -24,6 +24,7 @@ export const GlobalReach: React.FC = () => {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+        <h2 className="sr-only">Pan-India Cold Chain Nut Supply Network Across 23 States</h2>
         <div className="w-full overflow-hidden">
           <img
             src="/Pan-India Premium Nut Supply Network.webp"

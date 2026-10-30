@@ -1,33 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.tanviimpex.com/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.tanviimpex.com/og-image.jpg</image:loc>
+      <image:title>Tanvi Impex Wholesale California Almonds, Irani Pistachios &amp; Dry Fruits</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tanviimpex.com/Tanvi%20Impex%20Dry%20Fruits%20Logo.png</image:loc>
+      <image:title>Tanvi Impex Brand Logo</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.tanviimpex.com/products</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.tanviimpex.com/hero3.png</image:loc>
+      <image:title>California Super Premium Almond 15kg Wholesale Bag</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tanviimpex.com/Premium%20Irani%20Pistachio%20Pouch.png</image:loc>
+      <image:title>Irani Roasted Pistachios 20kg Master Carton</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.tanviimpex.com/products?category=almonds</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.tanviimpex.com/category-almonds.webp</image:loc>
+      <image:title>California Almonds Wholesale Category</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.tanviimpex.com/products?category=pistachios</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.tanviimpex.com/category-pistachios.webp</image:loc>
+      <image:title>Irani and California Pistachios Wholesale Category</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.tanviimpex.com/products?category=seeds</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.tanviimpex.com/category-seeds.webp</image:loc>
+      <image:title>Superfood Seeds Bulk Wholesale Category</image:title>
+    </image:image>
   </url>
 </urlset>
